@@ -1,0 +1,330 @@
+// src/data/twoFactorMessages.js
+// Teks 2FA, digabung ke langStore (namespace `twoFactor`).
+export const twoFactorMessages = {
+  id: {
+    verify: {
+      title: "Verifikasi Dua Langkah",
+      desc: "Masukkan 6 digit kode dari aplikasi Authenticator Anda.",
+      backupDesc: "Masukkan salah satu backup code Anda. Setiap kode hanya berlaku satu kali.",
+      placeholder: "000 000",
+      backupPlaceholder: "XXXXX-XXXXX",
+      useBackup: "Gunakan backup code",
+      useApp: "Gunakan kode dari aplikasi",
+      submit: "Verifikasi",
+      verifying: "Memverifikasi...",
+      back: "Kembali ke login",
+      attemptsLeft: "Sisa percobaan: {n}",
+      lockedTitle: "Verifikasi terkunci sementara",
+      lockedDesc: "Terlalu banyak kode salah. Coba lagi dalam {t}.",
+      codeRequired: "Kode wajib diisi",
+      help: "Kode berganti setiap 30 detik. Pastikan jam HP Anda diatur otomatis."
+    },
+    setup: {
+      forcedTitle: "Aktifkan 2FA",
+      forcedDesc: "Administrator mewajibkan 2FA untuk akun Anda. Selesaikan pengaturan ini untuk melanjutkan.",
+      step1: "Pindai QR code",
+      step1Desc: "Buka Google Authenticator atau Microsoft Authenticator, pilih Tambah akun, lalu pindai kode QR ini.",
+      manual: "Tidak bisa memindai? Masukkan kunci ini secara manual:",
+      copy: "Salin",
+      copied: "Tersalin",
+      step2: "Masukkan kode verifikasi",
+      step2Desc: "Masukkan 6 digit kode yang tampil di aplikasi untuk menyelesaikan pengaktifan.",
+      activate: "Aktifkan 2FA",
+      activating: "Mengaktifkan...",
+      preparing: "Menyiapkan QR code...",
+      expiresIn: "QR berlaku {t}",
+      expired: "QR code sudah kedaluwarsa.",
+      newQr: "Buat QR baru",
+      cancel: "Batal",
+      codeInvalidFormat: "Kode harus 6 digit angka",
+      chooseApp: "Pilih aplikasi Authenticator Anda",
+      sameQr: "QR code yang sama berlaku untuk kedua aplikasi.",
+      getApp: "Belum punya aplikasinya?",
+      openInApp: "Buka langsung di aplikasi Authenticator (di HP ini)",
+      apps: {
+        google: {
+          name: "Google Authenticator",
+          s1: "Buka Google Authenticator di HP Anda.",
+          s2: "Ketuk tombol + lalu pilih Pindai kode QR.",
+          s3: "Arahkan kamera ke QR code di bawah ini.",
+          manualHint: "Input manual: pilih Masukkan kunci penyiapan, isi nama akun bebas, tempel kunci di bawah, pilih Berbasis waktu."
+        },
+        microsoft: {
+          name: "Microsoft Authenticator",
+          s1: "Buka Microsoft Authenticator di HP Anda.",
+          s2: "Ketuk + (Tambahkan akun), lalu pilih Akun lainnya (Google, Facebook, dll.).",
+          s3: "Pindai QR code di bawah ini.",
+          manualHint: "Input manual: pilih Atau masukkan kode secara manual, lalu tempel kunci di bawah."
+        }
+      }
+    },
+    backup: {
+      title: "Simpan Backup Code Anda",
+      desc: "Kode ini hanya ditampilkan satu kali. Gunakan jika Anda kehilangan akses ke aplikasi Authenticator. Setiap kode hanya berlaku satu kali.",
+      copyAll: "Salin semua",
+      download: "Unduh .txt",
+      copied: "Backup code tersalin",
+      confirm: "Saya sudah menyimpan backup code ini di tempat yang aman",
+      continue: "Lanjutkan"
+    },
+    card: {
+      title: "Autentikasi Dua Faktor (2FA)",
+      desc: "Lindungi akun dengan kode sekali pakai dari Google Authenticator atau Microsoft Authenticator.",
+      active: "Aktif",
+      inactive: "Belum aktif",
+      required: "Diwajibkan administrator",
+      since: "Aktif sejak",
+      backupLeft: "Sisa backup code",
+      lowBackup: "Backup code hampir habis. Sebaiknya buat yang baru.",
+      enable: "Aktifkan 2FA",
+      disable: "Nonaktifkan 2FA",
+      regen: "Buat ulang backup code",
+      cannotDisable: "2FA tidak dapat dinonaktifkan karena diwajibkan oleh administrator.",
+      requiredNotEnabled: "Administrator mewajibkan 2FA untuk akun Anda. Aktifkan sekarang.",
+      enabledOk: "2FA berhasil diaktifkan",
+      disabledOk: "2FA berhasil dinonaktifkan",
+      regenOk: "Backup code baru berhasil dibuat",
+      loadFailed: "Gagal memuat status 2FA."
+    },
+    confirm: {
+      title: "Konfirmasi Identitas",
+      disableDesc: "Masukkan kata sandi dan kode 2FA untuk menonaktifkan 2FA.",
+      regenDesc: "Masukkan kata sandi dan kode 2FA. Backup code lama tidak akan berlaku lagi.",
+      password: "Kata sandi",
+      code: "Kode 2FA atau backup code",
+      cancel: "Batal",
+      disableAction: "Nonaktifkan",
+      regenAction: "Buat ulang",
+      fieldsRequired: "Kata sandi dan kode wajib diisi"
+    },
+    admin: {
+      title: "Keamanan",
+      subtitle: "Atur kebijakan Autentikasi Dua Faktor (2FA) untuk seluruh sistem.",
+      policyTitle: "Kebijakan 2FA",
+      modeLabel: "Mode",
+      modes: {
+        DISABLED: "Disabled",
+        OPTIONAL: "Optional",
+        MANDATORY: "Mandatory"
+      },
+      modeDesc: {
+        DISABLED: "2FA tidak diwajibkan untuk siapa pun dan tidak tersedia bagi pengguna.",
+        OPTIONAL: "Pengguna bebas mengaktifkan 2FA sendiri di menu Pengaturan.",
+        MANDATORY: "Pengguna yang ditentukan wajib menggunakan 2FA."
+      },
+      scopeLabel: "Cakupan Mandatory",
+      scopes: {
+        ALL_USERS: "Semua pengguna",
+        SELECTED_USERS: "Pengguna tertentu",
+        BY_ROLE: "Berdasarkan role"
+      },
+      scopeDesc: {
+        ALL_USERS: "Semua pengguna wajib 2FA.",
+        SELECTED_USERS: "Hanya pengguna yang dipilih.",
+        BY_ROLE: "Semua pengguna dengan role tertentu."
+      },
+      rolesLabel: "Pilih role",
+      rolesRequired: "Pilih minimal satu role.",
+      usersLabel: "Pilih pengguna",
+      usersRequired: "Pilih minimal satu pengguna.",
+      usersSearch: "Cari nama, username, atau email...",
+      usersSelected: "dipilih",
+      usersEmpty: "Tidak ada pengguna ditemukan.",
+      usersLoadFailed: "Daftar pengguna gagal dimuat.",
+      clearSelection: "Hapus pilihan",
+      scopeRequired: "Pilih cakupan Mandatory.",
+      impactTitle: "Dampak kebijakan",
+      impact: {
+        DISABLED: "Login berjalan normal tanpa kode 2FA, termasuk untuk pengguna yang sudah pernah mengaktifkannya.",
+        OPTIONAL: "Pengguna yang sudah mengaktifkan 2FA tetap diminta kode saat login. Yang lain tidak.",
+        ALL_USERS: "Semua pengguna yang belum mengaktifkan 2FA akan diminta mengaktifkannya saat login berikutnya.",
+        SELECTED_USERS: "Pengguna terpilih yang belum mengaktifkan 2FA akan diminta mengaktifkannya saat login berikutnya.",
+        BY_ROLE: "Pengguna dengan role terpilih yang belum mengaktifkan 2FA akan diminta mengaktifkannya saat login berikutnya."
+      },
+      impactSession: "Sesi yang sedang berjalan akan diminta login ulang saat token diperbarui.",
+      lastUpdated: "Terakhir diubah",
+      save: "Simpan Kebijakan",
+      saving: "Menyimpan...",
+      reset: "Batalkan perubahan",
+      saveOk: "Kebijakan 2FA berhasil disimpan",
+      saveFailed: "Gagal menyimpan kebijakan 2FA",
+      confirmTitle: "Simpan kebijakan 2FA?",
+      confirmYes: "Ya, simpan",
+      confirmCancel: "Batal",
+      loadFailed: "Gagal memuat kebijakan 2FA.",
+      retry: "Coba Lagi",
+      resetTitle: "Reset 2FA Pengguna",
+      resetDesc: "Untuk pengguna yang kehilangan HP dan backup code. 2FA dinonaktifkan dan semua sesi pengguna dicabut.",
+      resetButton: "Reset 2FA",
+      resetConfirmTitle: "Reset 2FA pengguna ini?",
+      resetConfirmDesc: "Semua sesi pengguna akan dicabut dan 2FA dinonaktifkan. Pengguna perlu mendaftarkan ulang bila diwajibkan.",
+      resetOk: "2FA pengguna berhasil di-reset",
+      resetFailed: "Gagal me-reset 2FA pengguna",
+      resetSearch: "Cari pengguna untuk di-reset..."
+    },
+    loginNotice: "Administrator mewajibkan 2FA untuk akun Anda. Silakan login untuk mengaktifkannya."
+  },
+  en: {
+    verify: {
+      title: "Two-Step Verification",
+      desc: "Enter the 6-digit code from your Authenticator app.",
+      backupDesc: "Enter one of your backup codes. Each code can only be used once.",
+      placeholder: "000 000",
+      backupPlaceholder: "XXXXX-XXXXX",
+      useBackup: "Use a backup code",
+      useApp: "Use code from the app",
+      submit: "Verify",
+      verifying: "Verifying...",
+      back: "Back to login",
+      attemptsLeft: "Attempts left: {n}",
+      lockedTitle: "Verification temporarily locked",
+      lockedDesc: "Too many wrong codes. Try again in {t}.",
+      codeRequired: "Code is required",
+      help: "Codes change every 30 seconds. Make sure your phone time is set to automatic."
+    },
+    setup: {
+      forcedTitle: "Enable 2FA",
+      forcedDesc: "Your administrator requires 2FA for your account. Complete this setup to continue.",
+      step1: "Scan the QR code",
+      step1Desc: "Open Google Authenticator or Microsoft Authenticator, choose Add account, then scan this QR code.",
+      manual: "Can't scan? Enter this key manually:",
+      copy: "Copy",
+      copied: "Copied",
+      step2: "Enter the verification code",
+      step2Desc: "Enter the 6-digit code shown in the app to finish activation.",
+      activate: "Enable 2FA",
+      activating: "Enabling...",
+      preparing: "Preparing QR code...",
+      expiresIn: "QR valid for {t}",
+      expired: "This QR code has expired.",
+      newQr: "Generate new QR",
+      cancel: "Cancel",
+      codeInvalidFormat: "Code must be 6 digits",
+      chooseApp: "Choose your Authenticator app",
+      sameQr: "The same QR code works with both apps.",
+      getApp: "Don't have the app yet?",
+      openInApp: "Open directly in your Authenticator app (on this phone)",
+      apps: {
+        google: {
+          name: "Google Authenticator",
+          s1: "Open Google Authenticator on your phone.",
+          s2: "Tap + then choose Scan a QR code.",
+          s3: "Point the camera at the QR code below.",
+          manualHint: "Manual entry: choose Enter a setup key, type any account name, paste the key below, select Time based."
+        },
+        microsoft: {
+          name: "Microsoft Authenticator",
+          s1: "Open Microsoft Authenticator on your phone.",
+          s2: "Tap + (Add account), then choose Other account (Google, Facebook, etc.).",
+          s3: "Scan the QR code below.",
+          manualHint: "Manual entry: choose Or enter code manually, then paste the key below."
+        }
+      }
+    },
+    backup: {
+      title: "Save Your Backup Codes",
+      desc: "These codes are shown only once. Use them if you lose access to your Authenticator app. Each code can only be used once.",
+      copyAll: "Copy all",
+      download: "Download .txt",
+      copied: "Backup codes copied",
+      confirm: "I have saved these backup codes in a safe place",
+      continue: "Continue"
+    },
+    card: {
+      title: "Two-Factor Authentication (2FA)",
+      desc: "Protect your account with one-time codes from Google Authenticator or Microsoft Authenticator.",
+      active: "Active",
+      inactive: "Not enabled",
+      required: "Required by administrator",
+      since: "Enabled since",
+      backupLeft: "Backup codes left",
+      lowBackup: "You are running low on backup codes. Consider generating new ones.",
+      enable: "Enable 2FA",
+      disable: "Disable 2FA",
+      regen: "Regenerate backup codes",
+      cannotDisable: "2FA cannot be disabled because it is required by the administrator.",
+      requiredNotEnabled: "Your administrator requires 2FA for your account. Enable it now.",
+      enabledOk: "2FA enabled successfully",
+      disabledOk: "2FA disabled successfully",
+      regenOk: "New backup codes generated",
+      loadFailed: "Failed to load 2FA status."
+    },
+    confirm: {
+      title: "Confirm Your Identity",
+      disableDesc: "Enter your password and a 2FA code to disable 2FA.",
+      regenDesc: "Enter your password and a 2FA code. Old backup codes will stop working.",
+      password: "Password",
+      code: "2FA code or backup code",
+      cancel: "Cancel",
+      disableAction: "Disable",
+      regenAction: "Regenerate",
+      fieldsRequired: "Password and code are required"
+    },
+    admin: {
+      title: "Security",
+      subtitle: "Configure the Two-Factor Authentication (2FA) policy for the whole system.",
+      policyTitle: "2FA Policy",
+      modeLabel: "Mode",
+      modes: {
+        DISABLED: "Disabled",
+        OPTIONAL: "Optional",
+        MANDATORY: "Mandatory"
+      },
+      modeDesc: {
+        DISABLED: "2FA is not required for anyone and is unavailable to users.",
+        OPTIONAL: "Users may enable 2FA themselves in Settings.",
+        MANDATORY: "Specified users must use 2FA."
+      },
+      scopeLabel: "Mandatory Scope",
+      scopes: {
+        ALL_USERS: "All users",
+        SELECTED_USERS: "Selected users",
+        BY_ROLE: "By role"
+      },
+      scopeDesc: {
+        ALL_USERS: "Every user must use 2FA.",
+        SELECTED_USERS: "Only the chosen users.",
+        BY_ROLE: "Everyone with specific roles."
+      },
+      rolesLabel: "Select roles",
+      rolesRequired: "Select at least one role.",
+      usersLabel: "Select users",
+      usersRequired: "Select at least one user.",
+      usersSearch: "Search name, username, or email...",
+      usersSelected: "selected",
+      usersEmpty: "No users found.",
+      usersLoadFailed: "Failed to load the user list.",
+      clearSelection: "Clear selection",
+      scopeRequired: "Choose a Mandatory scope.",
+      impactTitle: "Policy impact",
+      impact: {
+        DISABLED: "Login works normally without 2FA codes, including for users who previously enabled it.",
+        OPTIONAL: "Users who enabled 2FA are still asked for a code at login. Others are not.",
+        ALL_USERS: "Every user who has not enabled 2FA will be asked to enable it at their next login.",
+        SELECTED_USERS: "Selected users who have not enabled 2FA will be asked to enable it at their next login.",
+        BY_ROLE: "Users with the selected roles who have not enabled 2FA will be asked to enable it at their next login."
+      },
+      impactSession: "Sessions already running will be asked to sign in again when their token is refreshed.",
+      lastUpdated: "Last updated",
+      save: "Save Policy",
+      saving: "Saving...",
+      reset: "Discard changes",
+      saveOk: "2FA policy saved successfully",
+      saveFailed: "Failed to save 2FA policy",
+      confirmTitle: "Save 2FA policy?",
+      confirmYes: "Yes, save",
+      confirmCancel: "Cancel",
+      loadFailed: "Failed to load the 2FA policy.",
+      retry: "Retry",
+      resetTitle: "Reset User 2FA",
+      resetDesc: "For users who lost their phone and backup codes. 2FA is disabled and all of the user's sessions are revoked.",
+      resetButton: "Reset 2FA",
+      resetConfirmTitle: "Reset this user's 2FA?",
+      resetConfirmDesc: "All of the user's sessions will be revoked and 2FA disabled. The user must re-enroll if required.",
+      resetOk: "User 2FA reset successfully",
+      resetFailed: "Failed to reset user 2FA",
+      resetSearch: "Search a user to reset..."
+    },
+    loginNotice: "Your administrator requires 2FA for your account. Please sign in to enable it."
+  }
+};

@@ -1,0 +1,277 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/poppins-v24-devanagari_latin-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/poppins-v24-devanagari_latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/poppins-v24-devanagari_latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/poppins-v24-devanagari_latin-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/fonts/material-icons-v145-latin-regular.woff2") format("woff2");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary-dark: #1f2937;
+  --color-primary-accent: #4f46e5;
+  --color-secondary-button: #6366f1;
+  --color-dark-control: #374151;
+}
+
+/* ─── Base Typography ───────────────────────────────────── */
+@layer base {
+  body {
+    @apply font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #1e293b;
+    background-color: #f8fafc;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  /* Heading scale — pakai semibold bukan black/extrabold */
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #0f172a;
+    letter-spacing: -0.015em;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #1e293b;
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #1e293b;
+  }
+
+  h5 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #334155;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #334155;
+  }
+
+  /* Paragraf — weight normal, cukup readable */
+  p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #475569;
+    line-height: 1.65;
+  }
+
+  /* Label form — sedikit lebih gelap */
+  label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #374151;
+  }
+
+  /* Input, select, textarea */
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  /* Button — medium weight sudah cukup */
+  button {
+    font-family: inherit;
+    font-weight: 500;
+  }
+
+  /* Tabel */
+  th {
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  td {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #374151;
+  }
+}
+
+/* ─── Utility Classes Tambahan ──────────────────────────── */
+@layer utilities {
+
+  /* Badge / label kecil */
+  .text-label {
+    font-size: 0.6875rem;
+    /* 11px */
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  /* Caption / timestamp kecil */
+  .text-caption {
+    font-size: 0.6875rem;
+    /* 11px */
+    font-weight: 400;
+    color: #94a3b8;
+  }
+
+  /* Heading section dalam card */
+  .section-title {
+    font-size: 0.8125rem;
+    /* 13px */
+    font-weight: 600;
+    color: #1e293b;
+    letter-spacing: -0.01em;
+  }
+
+  /* Stat number besar */
+  .stat-number {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #0f172a;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+
+  /* Sidebar nav item */
+  .nav-item {
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  .nav-item-active {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
+
+/* ─── Scrollbar Global ──────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ─── Responsive Global Utilities ───────────────────────── */
+
+/* Pastikan tidak ada overflow horizontal di level body */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Tabel selalu bisa di-scroll horizontal di mobile */
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Modal — di mobile pastikan tidak overflow layar */
+@media (max-width: 640px) {
+
+  /* Modal containers */
+  [class*="max-w-4xl"],
+  [class*="max-w-3xl"],
+  [class*="max-w-2xl"] {
+    max-width: calc(100vw - 2rem) !important;
+  }
+
+  /* Padding modal di mobile lebih kecil */
+  .px-10 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .py-8 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+/* Fix min-width agar flex children tidak kecil banget di mobile */
+.min-w-0 {
+  min-width: 0;
+}

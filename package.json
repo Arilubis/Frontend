@@ -1,0 +1,41 @@
+{
+  "name": "dms-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production",
+    "build:sandbox": "vite build --mode sandbox",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "apexcharts": "^5.8.1",
+    "axios": "^1.13.2",
+    "chart.js": "^4.5.1",
+    "crypto-js": "^4.2.0",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.7",
+    "jwt-decode": "^4.0.0",
+    "mammoth": "^1.11.0",
+    "pinia": "^3.0.4",
+    "sweetalert2": "^11.26.17",
+    "vue": "^3.5.24",
+    "vue-draggable-next": "^2.3.0",
+    "vue-router": "^4.6.3",
+    "vue3-apexcharts": "^1.10.0",
+    "vuedraggable": "^4.1.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17",
+    "vite": "^7.2.4"
+  }
+}
